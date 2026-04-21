@@ -53,7 +53,7 @@ _ALL_LANGUAGES = ["Auto"] + sorted(lang_display_name(n) for n in LANG_NAMES)
 # ---------------------------------------------------------------------------
 # Voice Design instruction templates
 # ---------------------------------------------------------------------------
-# Each option is displayed as "English / 中文".
+# Each option is displayed as "English".
 # The model expects English for accents and Chinese for dialects.
 _CATEGORIES = {
     "Gender": ["Male", "Female"],
@@ -235,7 +235,7 @@ def build_demo(
     """
 
     # Reusable: language dropdown component
-    def _lang_dropdown(label="Language (optional) / 语种 (可选)", value="Auto"):
+    def _lang_dropdown(label="Language (optional)", value="Auto"):
         return gr.Dropdown(
             label=label,
             choices=_ALL_LANGUAGES,
